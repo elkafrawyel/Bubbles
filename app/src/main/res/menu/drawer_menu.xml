@@ -32,7 +32,6 @@
         android:icon="@drawable/terms"
         android:title="@string/terms" />
 
-
     <item
         android:id="@+id/nav_about"
         android:icon="@drawable/about"
@@ -42,7 +41,6 @@
         android:id="@+id/nav_suggestion"
         android:icon="@drawable/suggestion"
         android:title="@string/suggestion" />
-
 
     <item
         android:id="@+id/nav_share"

@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import android.widget.LinearLayout
 import androidx.appcompat.content.res.AppCompatResources.getDrawable
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
@@ -17,6 +18,7 @@ import com.elwaha.bubbles.R
 import com.elwaha.bubbles.utilies.Constants
 import com.elwaha.bubbles.utilies.Constants.MAPVIEW_BUNDLE_KEY
 import com.elwaha.bubbles.utilies.Injector
+import com.elwaha.bubbles.utilies.shareApp
 import com.elwaha.bubbles.utilies.toast
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -108,7 +110,7 @@ class HomeFragment : Fragment(), NavigationView.OnNavigationItemSelectedListener
 
         val logoutView = navigationView.menu.getItem(LOGOUT_ID).actionView
 
-        logoutView.findViewById<FrameLayout>(R.id.logoutView).setOnClickListener {
+        logoutView.findViewById<LinearLayout>(R.id.logoutView).setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
             rootView.closeDrawer(GravityCompat.START)
         }
@@ -167,6 +169,10 @@ class HomeFragment : Fragment(), NavigationView.OnNavigationItemSelectedListener
 
             R.id.nav_settings -> {
                 findNavController().navigate(R.id.settingsFragment)
+            }
+
+            R.id.nav_share ->{
+                activity?.shareApp()
             }
 
         }

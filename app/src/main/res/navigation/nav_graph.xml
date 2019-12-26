@@ -59,7 +59,7 @@
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/myDeliveredPackages"
-        android:name="com.elwaha.bubbles.ui.myDeliveredPackages.MyDeliveredPackages"
+        android:name="com.elwaha.bubbles.ui.myDeliveredPackages.MyDeliveredPackagesFragment"
         android:label="my_delivered_packages_fragment"
         tools:layout="@layout/my_delivered_packages_fragment" />
     <fragment

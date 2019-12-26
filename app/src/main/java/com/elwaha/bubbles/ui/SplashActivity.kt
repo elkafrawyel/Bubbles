@@ -15,7 +15,7 @@ class SplashActivity : AppCompatActivity() {
 
         Injector.getPreferenceHelper().isLoggedIn = true
 
-        Injector.getPreferenceHelper().userType = Constants.UserType.USER.value
+        Injector.getPreferenceHelper().userType = Constants.UserType.DRIVER.value
         val intent = Intent(this,MainActivity::class.java)
         startActivity(intent)
         finish()

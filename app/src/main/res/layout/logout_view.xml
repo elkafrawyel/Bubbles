@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/logoutView"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp">
 
     <LinearLayout
-        android:layout_gravity="start"
         android:layout_width="150dp"
+        android:layout_marginEnd="100dp"
         android:layout_height="wrap_content"
         android:background="@drawable/signoutbutton"
         android:orientation="horizontal">
@@ -22,13 +22,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginStart="12dp"
             android:fontFamily="@font/stv_bold"
             android:gravity="center"
-            android:layout_marginStart="12dp"
             android:text="@string/Logout"
             android:textAppearance="?attr/textAppearanceBody1"
-            android:textColor="@android:color/white"
-            tools:ignore="RtlSymmetry" />
+            android:textColor="@android:color/white" />
     </LinearLayout>
-
-</FrameLayout>
+</LinearLayout>

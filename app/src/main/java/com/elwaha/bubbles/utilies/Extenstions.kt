@@ -22,6 +22,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.elwaha.bubbles.BuildConfig
 import com.elwaha.bubbles.BuildConfig.DEBUG
 import com.elwaha.bubbles.R
 import com.google.android.material.snackbar.Snackbar
@@ -238,6 +239,21 @@ fun Context.showLoading(
         .setMessage(message)
         .setContext(this)
         .build() as SpotsDialog
+}
+
+fun Context.shareApp() {
+    try {
+        val shareIntent = Intent(Intent.ACTION_SEND);
+        shareIntent.type = "text/plain";
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, R.string.app_name);
+        var shareMessage = "\nLet me recommend you this application\n\n";
+        shareMessage =
+            shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\n";
+        shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+        startActivity(Intent.createChooser(shareIntent, "choose one"));
+    } catch (e: java.lang.Exception) {
+        //e.toString();
+    }
 }
 
 //=============================== Image Real Path =============================
