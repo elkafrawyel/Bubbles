@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Bubbles</string>
+
+    <!--static strings-->
+    <string name="generalError">Error Happened</string>
+    <string name="loading">Loading</string>
+    <string name="load_failed">Load Failed</string>
+    <string name="load_end">Load Complete</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="empty_field">Empty Field</string>
+
+    <string name="transport_packages">Transport Packages</string>
+    <string name="onBoardingMessage">Transporting your packages on our way</string>
+    <string name="start">Start</string>
+    <string name="login">LogIn</string>
+    <string name="phone">phone number</string>
+    <string name="forgetPassword">forget your password?</string>
+    <string name="password">password</string>
+    <string name="enter">Enter</string>
+    <string name="notHaveAccount">Need New Account</string>
+    <string name="createAccount">Create Account</string>
+    <string name="myPackages">My Packages</string>
+    <string name="messages">Messages</string>
+    <string name="Logout">LogOut</string>
+    <string name="EditMyInfo">Edit My Information</string>
+    <string name="ChangePassword">Change Password</string>
+    <string name="settings">Settings</string>
+    <string name="terms">Terms and Condition</string>
+    <string name="About">About</string>
+    <string name="suggestion">Suggestions</string>
+    <string name="share">Share</string>
+    <string name="driver">Driver</string>
+    <string name="user">Customer</string>
+    <string name="choose">Choose</string>
+
+    <string name="language">App Language</string>
+    <string name="arabic" translatable="false">العربية</string>
+    <string name="english" translatable="false">English</string>
+    <string name="notifications">Notifications</string>
+    <string name="MyDeliveredPackages">MyDeliveredPackages</string>
+    <string name="create_driver_account">Create Driver Account</string>
+    <string name="addImage">Add Image</string>
+    <string name="userName">Username</string>
+    <string name="register">Register</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="IdNumber">Id Number</string>
+    <string name="addLicenceImage">Add Licence Image</string>
+    <string name="i_agree_on_terms_and_conditions">I agree on terms and conditions</string>
+    <string name="find_location">Find Location</string>
+    <string name="driver_location_message">By finding your location that will help you find the nearest packages to you faster.</string>
+    <string name="create_user_account">Create Customer Account</string>
+    <string name="user_location_message">By finding your location that will make you enjoy our service better.</string>
+    <string name="your_order_completed_successfully">Your Order Completed Successfully</string>
+    <string name="one_of_our_drivers_will_contact_you_and_you_will_be_notified_once_we_approve_your_request">One of our drivers will contact you and you will be notified once we approve your request</string>
+    <string name="returnToHome">Return To Home</string>
+    <string name="saveChanges">Save Changes</string>
+    <string name="changeLicenceImage">Change Licence Image</string>
+    <string name="currentPassword">Current Password</string>
+    <string name="savePasswordChanges">Save New Password</string>
+    <string name="email">Email</string>
+    <string name="suggestionDesc">Description</string>
+    <string name="send">Send</string>
+    <string name="or_contact_with_us">Or contact with us</string>
+    <string name="requestPermission">Bubbles needs location permission</string>
+    <string name="gettingLocation">Getting your location…</string>
+    <string name="locationSuccess">Location Detected Successfully</string>
+    <string name="transporting_information">Transporting Information</string>
+    <string name="want_to_deliver">Want to deliver</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="from_message">choose where to get the package</string>
+    <string name="to_message">where to deliver this package</string>
+    <string name="orderDesc">Box description</string>
+    <string name="important">Important</string>
+    <string name="note">The box should be closed well to be delivered safe</string>
+    <string name="makeOrder">Make Order</string>
+    <string name="write_your_message">write your message</string>
+    <string name="errorSelectImage">Error select image</string>
+    <string name="timeRemain">Time Remain</string>
+    <string name="driverName">Driver Name</string>
+    <string name="onway">OnWay</string>
+    <string name="deliverd">Deliverd</string>
+    <string name="cancelled">Cancelled</string>
+
+</resources>

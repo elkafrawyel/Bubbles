@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.registerUser.RegisterUserFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/stv_bold"
+            android:gravity="center"
+            android:text="@string/create_user_account"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/userplaceholder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/addImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/uploadblack"
+                android:text="@string/addImage"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="18dp"
+            app:boxBackgroundColor="@color/colorEditText"
+            app:boxCornerRadiusBottomEnd="@dimen/dp_10"
+            app:boxCornerRadiusBottomStart="@dimen/dp_10"
+            app:boxCornerRadiusTopEnd="@dimen/dp_10"
+            app:boxCornerRadiusTopStart="@dimen/dp_10"
+            app:boxStrokeColor="@color/colorEditText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/userName"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="18dp"
+            app:boxBackgroundColor="@color/colorEditText"
+            app:boxCornerRadiusBottomEnd="@dimen/dp_10"
+            app:boxCornerRadiusBottomStart="@dimen/dp_10"
+            app:boxCornerRadiusTopEnd="@dimen/dp_10"
+            app:boxCornerRadiusTopStart="@dimen/dp_10"
+            app:boxStrokeColor="@color/colorEditText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phoneEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="18dp"
+            app:boxBackgroundColor="@color/colorEditText"
+            app:boxCornerRadiusBottomEnd="@dimen/dp_10"
+            app:boxCornerRadiusBottomStart="@dimen/dp_10"
+            app:boxCornerRadiusTopEnd="@dimen/dp_10"
+            app:boxCornerRadiusTopStart="@dimen/dp_10"
+            app:boxStrokeColor="@color/colorEditText"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="18dp"
+            app:boxBackgroundColor="@color/colorEditText"
+            app:boxCornerRadiusBottomEnd="@dimen/dp_10"
+            app:boxCornerRadiusBottomStart="@dimen/dp_10"
+            app:boxCornerRadiusTopEnd="@dimen/dp_10"
+            app:boxCornerRadiusTopStart="@dimen/dp_10"
+            app:boxStrokeColor="@color/colorEditText"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirmPasswordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirmPassword"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/termsCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:text="@string/i_agree_on_terms_and_conditions"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createMbtn"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="24dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/register"
+            android:textAllCaps="false"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:cornerRadius="20dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@android:color/darker_gray" />
+
+    </LinearLayout>
+</ScrollView>

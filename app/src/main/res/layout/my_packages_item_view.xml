@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/myPackagesItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_4"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="@dimen/dp_10"
+    app:cardMaxElevation="@dimen/dp_4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/from"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/to"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/timeRemain"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/driverName"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textColor="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="المحلة الكبري"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="القاهرة"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="يومين"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="محمود"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="05:33 PM"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/onWay"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:drawableEnd="@drawable/onway"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/stv_bold"
+                android:gravity="center"
+                android:text="@string/onway"
+                android:visibility="gone"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="#1DC8CE" />
+
+            <TextView
+                android:id="@+id/deliverd"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:drawableEnd="@drawable/deliverd"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/stv_bold"
+                android:gravity="center"
+                android:text="@string/deliverd"
+                android:visibility="gone"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="#26A7F3" />
+
+            <TextView
+                android:id="@+id/cancelled"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:drawableEnd="@drawable/cancelled"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/stv_bold"
+                android:gravity="center"
+                android:text="@string/cancelled"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="#FF023D" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

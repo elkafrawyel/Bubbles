@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">بابل</string>
+
+<!--static strings-->
+    <string name="ok">حسنا</string>
+    <string name="cancel">الغاء</string>
+    <string name="loading">تحميل</string>
+    <string name="load_failed">فشل التحميل</string>
+    <string name="load_end">لا يوجد المزيد</string>
+    <string name="empty_field">حقل فارغ</string>
+    <string name="generalError">حدث خطأ ما</string>
+
+
+    <string name="transport_packages">انقل طرودك</string>
+    <string name="onBoardingMessage">ننقل طردك علي دربنا</string>
+    <string name="start">ابدأ</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="forgetPassword">هل نسيت كلمة المرور؟</string>
+    <string name="phone">رقم الجوال</string>
+    <string name="password">كلمة المرور</string>
+    <string name="enter">دخول</string>
+    <string name="notHaveAccount">ليس لديك حساب</string>
+    <string name="createAccount">انشئ حساب</string>
+    <string name="messages">المحادثات</string>
+    <string name="myPackages">طرودي</string>
+    <string name="Logout">تسجيل خروج</string>
+    <string name="EditMyInfo">تعديل معلوماتي</string>
+    <string name="About">عن التطبيق</string>
+    <string name="ChangePassword">تغيير كلمة المرور</string>
+    <string name="settings">الاعدادات</string>
+    <string name="share">مشاركة التطبيق</string>
+    <string name="suggestion">الشكاوي والمقتراحات</string>
+    <string name="terms">الشروط والاحكام</string>
+    <string name="driver">سائق لنقل الطرود \n(سائق)</string>
+    <string name="user">أضافة طرد للنقل \n(عميل)</string>
+    <string name="choose">حدد وجهتك</string>
+    <string name="language">لغة التطبيق</string>
+    <string name="notifications">التنبيهات</string>
+    <string name="MyDeliveredPackages">توصيلاتي</string>
+    <string name="create_driver_account">أنشاء حساب سائق</string>
+    <string name="addImage">اضف صورة</string>
+    <string name="userName">اسم المستخدم</string>
+    <string name="register">تسجيل</string>
+    <string name="confirmPassword">تأكيد كلمة المرور</string>
+    <string name="IdNumber">رقم الهوية</string>
+    <string name="addLicenceImage">اضف صورة رخصة القيادة</string>
+    <string name="i_agree_on_terms_and_conditions">اوافق علي جميع الشروط والاحكام</string>
+    <string name="driver_location_message">بتحديد موقعك ستسهل عليك الوصول اسرع الي الطرود القريبة منك لتوصيلها</string>
+    <string name="find_location">تحديد الموقع</string>
+    <string name="create_user_account">انشاء حساب عميل</string>
+    <string name="user_location_message">بتحديد موقعك ستسهل عليك الكيثر والاستمتاع بخدماتنا بشكل افضل</string>
+    <string name="your_order_completed_successfully">تم وضع طلبك بنجاح</string>
+    <string name="one_of_our_drivers_will_contact_you_and_you_will_be_notified_once_we_approve_your_request">"سوف يتواصل معك احد السائقين ونخبرك في التنبيهات فور الموافقة علي طلبك "</string>
+    <string name="returnToHome">الرجوع للرئيسية</string>
+    <string name="saveChanges">حفظ التغيرات</string>
+    <string name="changeLicenceImage">تغيير صورة رخصة القيادة</string>
+    <string name="currentPassword">كلمة المرور الحالية</string>
+    <string name="savePasswordChanges">حفظ كلمة المرور الجديدة</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="suggestionDesc">تفاصيل شكوتك او مقترحاتك</string>
+    <string name="send">ارسال</string>
+    <string name="or_contact_with_us">او تواصل معنا عبر</string>
+    <string name="requestPermission">طلب صلاحية الموقع</string>
+    <string name="gettingLocation">جاري تحديد موقعك</string>
+    <string name="locationSuccess">تم الوصول الي موقعك</string>
+    <string name="transporting_information">بيانات النقل</string>
+    <string name="want_to_deliver">تريد نقل اغراضك</string>
+    <string name="to">الى</string>
+    <string name="from">من</string>
+    <string name="date">تاريخ وصول الطلب</string>
+    <string name="time">التوقيت</string>
+    <string name="from_message">قم بتحديد عنوان الطرد الذي سيتم ارساله</string>
+    <string name="to_message">قم بتحديد العنوان الذي سيتم ارسال الطرد اليه</string>
+    <string name="orderDesc">تفاصيل مواصفات البوكس</string>
+    <string name="important">ملاحظة هامة</string>
+    <string name="note">يرجي اغلاق البوكس جيدا لضمان وصولة بامان</string>
+    <string name="makeOrder">وضع الطلب</string>
+    <string name="write_your_message">اكتب رسالتك</string>
+    <string name="errorSelectImage">خطأ في اختيار الصورة</string>
+    <string name="driverName">اسم السائق</string>
+    <string name="timeRemain">باقي للوصول</string>
+    <string name="onway">في الطريق</string>
+    <string name="deliverd">تم الاستلام</string>
+    <string name="cancelled">ملغي</string>
+
+</resources>

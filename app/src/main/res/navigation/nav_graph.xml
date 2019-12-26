@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/auth">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.elwaha.bubbles.ui.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/auth"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_homeFragment_to_myDeliveredPackages"
+            app:destination="@id/myDeliveredPackages" />
+        <action
+            android:id="@+id/action_homeFragment_to_myPackagesFragment"
+            app:destination="@id/myPackagesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_termsFragment"
+            app:destination="@id/termsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_suggestionsFragment"
+            app:destination="@id/suggestionsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_editUserInfoFragment"
+            app:destination="@id/editUserInfoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_editDriverInfoFragment"
+            app:destination="@id/editDriverInfoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_makeOrderFragment"
+            app:destination="@id/makeOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.elwaha.bubbles.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/myDeliveredPackages"
+        android:name="com.elwaha.bubbles.ui.myDeliveredPackages.MyDeliveredPackages"
+        android:label="my_delivered_packages_fragment"
+        tools:layout="@layout/my_delivered_packages_fragment" />
+    <fragment
+        android:id="@+id/myPackagesFragment"
+        android:name="com.elwaha.bubbles.ui.myPackages.MyPackagesFragment"
+        android:label="my_packages_fragment"
+        tools:layout="@layout/my_packages_fragment" />
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.elwaha.bubbles.ui.messages.MessagesFragment"
+        android:label="messages_fragment"
+        tools:layout="@layout/messages_fragment" >
+        <action
+            android:id="@+id/action_messagesFragment_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.elwaha.bubbles.ui.about.AboutFragment"
+        android:label="about_fragment"
+        tools:layout="@layout/about_fragment" />
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.elwaha.bubbles.ui.terms.TermsFragment"
+        android:label="terms_fragment"
+        tools:layout="@layout/terms_fragment" />
+    <fragment
+        android:id="@+id/suggestionsFragment"
+        android:name="com.elwaha.bubbles.ui.suggestions.SuggestionsFragment"
+        android:label="suggestions_fragment"
+        tools:layout="@layout/suggestions_fragment" />
+    <fragment
+        android:id="@+id/editUserInfoFragment"
+        android:name="com.elwaha.bubbles.ui.editUserInfo.EditUserInfoFragment"
+        android:label="edit_User_info_fragment"
+        tools:layout="@layout/edit_user_info_fragment" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.elwaha.bubbles.ui.changePassword.ChangePasswordFragment"
+        android:label="change_password_fragment"
+        tools:layout="@layout/change_password_fragment" />
+
+    <fragment
+        android:id="@+id/chatRoomFragment"
+        android:name="com.elwaha.bubbles.ui.chatRoom.ChatRoomFragment"
+        android:label="chat_room_fragment"
+        tools:layout="@layout/chat_room_fragment" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.elwaha.bubbles.ui.notifications.NotificationsFragment"
+        android:label="notifications_fragment"
+        tools:layout="@layout/notifications_fragment" />
+    <fragment
+        android:id="@+id/makeOrderFragment"
+        android:name="com.elwaha.bubbles.ui.makeOrder.MakeOrderFragment"
+        android:label="make_order_fragment"
+        tools:layout="@layout/make_order_fragment" >
+        <action
+            android:id="@+id/action_makeOrderFragment_to_orderSuccessFragment"
+            app:destination="@id/orderSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSuccessFragment"
+        android:name="com.elwaha.bubbles.ui.orderSuccess.OrderSuccessFragment"
+        android:label="order_success_fragment"
+        tools:layout="@layout/order_success_fragment" >
+        <action
+            android:id="@+id/action_orderSuccessFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editDriverInfoFragment"
+        android:name="com.elwaha.bubbles.ui.editDriverInfo.EditDriverInfoFragment"
+        android:label="edit_driver_info_fragment"
+        tools:layout="@layout/edit_driver_info_fragment" />
+
+    <navigation
+        android:id="@+id/auth"
+        app:startDestination="@id/onboardingFragment" >
+
+        <fragment
+            android:id="@+id/userLocationFragment"
+            android:name="com.elwaha.bubbles.ui.userLocation.UserLocationFragment"
+            android:label="user_location_fragment"
+            tools:layout="@layout/user_location_fragment">
+            <action
+                android:id="@+id/action_userLocationFragment_to_homeFragment"
+                app:destination="@id/homeFragment"
+                app:popUpTo="@id/auth"
+                app:popUpToInclusive="true" />
+        </fragment>
+        <fragment
+            android:id="@+id/registerDriverFragment"
+            android:name="com.elwaha.bubbles.ui.auth.registerDriver.RegisterDriverFragment"
+            android:label="register_driver_fragment"
+            tools:layout="@layout/register_driver_fragment">
+            <action
+                android:id="@+id/action_registerDriverFragment_to_driverLocationFragment"
+                app:destination="@id/driverLocationFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/registerUserFragment"
+            android:name="com.elwaha.bubbles.ui.auth.registerUser.RegisterUserFragment"
+            android:label="register_user_fragment"
+            tools:layout="@layout/register_user_fragment">
+            <action
+                android:id="@+id/action_registerUserFragment_to_userLocationFragment"
+                app:destination="@id/userLocationFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.elwaha.bubbles.ui.auth.login.LoginFragment"
+            android:label="login_fragment"
+            tools:layout="@layout/login_fragment">
+            <action
+                android:id="@+id/action_loginFragment_to_accountTypeFragment"
+                app:destination="@id/accountTypeFragment" />
+            <action
+                android:id="@+id/action_loginFragment_to_homeFragment"
+                app:destination="@id/homeFragment"
+                app:popUpTo="@id/auth"
+                app:popUpToInclusive="true" />
+        </fragment>
+        <fragment
+            android:id="@+id/driverLocationFragment"
+            android:name="com.elwaha.bubbles.ui.driverLocation.DriverLocationFragment"
+            android:label="driver_location_fragment"
+            tools:layout="@layout/driver_location_fragment">
+            <action
+                android:id="@+id/action_driverLocationFragment_to_homeFragment"
+                app:destination="@id/homeFragment"
+                app:launchSingleTop="true"
+                app:popUpTo="@+id/auth"
+                app:popUpToInclusive="true" />
+        </fragment>
+        <fragment
+            android:id="@+id/onboardingFragment"
+            android:name="com.elwaha.bubbles.ui.onboarding.OnboardingFragment"
+            android:label="onboarding_fragment"
+            tools:layout="@layout/onboarding_fragment">
+            <action
+                android:id="@+id/action_onboardingFragment_to_loginFragment"
+                app:destination="@id/loginFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/accountTypeFragment"
+            android:name="com.elwaha.bubbles.ui.accountType.AccountTypeFragment"
+            android:label="fragment_account_type"
+            tools:layout="@layout/account_type_fragment">
+            <action
+                android:id="@+id/action_accountTypeFragment_to_registerUserFragment"
+                app:destination="@id/registerUserFragment" />
+            <action
+                android:id="@+id/action_accountTypeFragment_to_registerDriverFragment"
+                app:destination="@id/registerDriverFragment" />
+        </fragment>
+    </navigation>
+</navigation>

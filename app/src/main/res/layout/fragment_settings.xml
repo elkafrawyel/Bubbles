@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="@drawable/headershape"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/backImgv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="18dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/settings"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:padding="8dp"
+        android:text="@string/language"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textColor="@android:color/black" />
+
+    <RadioGroup
+        android:id="@+id/languageGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp">
+
+        <RadioButton
+            android:id="@+id/arRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/arabic"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+        <RadioButton
+            android:id="@+id/enRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/english"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="18dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="@string/notifications"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="@android:color/black" />
+
+        <Switch
+            android:id="@+id/notificationSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:checked="false"
+            android:gravity="end"
+            style="@style/checkBox"/>
+    </LinearLayout>
+</LinearLayout>

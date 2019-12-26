@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_myPackages"
+        android:icon="@drawable/mypackages"
+        android:title="@string/myPackages" />
+
+    <item
+        android:id="@+id/nav_Massages"
+        android:icon="@drawable/messages"
+        android:title="@string/messages" />
+
+    <item
+        android:id="@+id/nav_MyInfo"
+        android:icon="@drawable/edit"
+        android:title="@string/EditMyInfo" />
+
+    <item
+        android:id="@+id/nav_ChangePassword"
+        android:icon="@drawable/changepass"
+        android:title="@string/ChangePassword" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/settings"
+        android:title="@string/settings" />
+
+    <item
+        android:id="@+id/nav_terms"
+        android:icon="@drawable/terms"
+        android:title="@string/terms" />
+
+
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/about"
+        android:title="@string/About" />
+
+    <item
+        android:id="@+id/nav_suggestion"
+        android:icon="@drawable/suggestion"
+        android:title="@string/suggestion" />
+
+
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/share"
+        android:title="@string/share" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:title=""
+        app:actionLayout="@layout/logout_view"
+        app:showAsAction="always" />
+</menu>

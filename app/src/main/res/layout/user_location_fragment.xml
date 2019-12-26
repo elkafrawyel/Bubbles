@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.userLocation.UserLocationFragment">
+
+    <TextView
+        android:id="@+id/backImgv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginEnd="24dp"
+        android:drawableStart="@drawable/backblack"
+        android:fontFamily="@font/stv_bold"
+        android:gravity="center"
+        android:text="@string/find_location"
+        android:textAppearance="?attr/textAppearanceHeadline5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="@string/user_location_message"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@android:color/darker_gray" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/illus2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/findLocationMbtn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="24dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/find_location"
+        android:textAllCaps="false"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/locationwhite"
+        app:iconGravity="textStart"
+        app:rippleColor="@color/colorAccent"
+        app:strokeColor="@android:color/darker_gray" />
+
+</LinearLayout>

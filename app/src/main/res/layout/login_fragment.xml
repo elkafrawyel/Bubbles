@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.login.LoginFragment">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/stv_bold"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@id/image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/signin_logo"
+                app:layout_constraintBottom_toTopOf="@id/phoneEt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text1" />
+
+
+            <EditText
+                android:id="@+id/phoneEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/edittext_bg"
+                android:drawableStart="@drawable/phone"
+                android:drawablePadding="36dp"
+                android:gravity="end"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:maxLines="1"
+                app:layout_constraintBottom_toTopOf="@id/passwordEt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image" />
+
+
+            <ImageView
+                android:id="@+id/phone_bg"
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/iconshape_edittext"
+                app:layout_constraintBottom_toBottomOf="@id/phoneEt"
+                app:layout_constraintStart_toStartOf="@id/phoneEt"
+                app:layout_constraintTop_toTopOf="@id/phoneEt" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_phone_white_24dp"
+                app:layout_constraintBottom_toBottomOf="@id/phoneEt"
+                app:layout_constraintEnd_toEndOf="@id/phone_bg"
+                app:layout_constraintStart_toStartOf="@id/phoneEt"
+                app:layout_constraintTop_toTopOf="@id/phoneEt" />
+
+            <EditText
+                android:id="@+id/passwordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/edittext_bg"
+                android:drawableStart="@drawable/phone"
+                android:drawablePadding="36dp"
+                android:gravity="end"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                app:layout_constraintBottom_toTopOf="@id/forgetPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phoneEt" />
+
+
+            <ImageView
+                android:id="@+id/password_bg"
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/iconshape_edittext"
+                app:layout_constraintBottom_toBottomOf="@id/passwordEt"
+                app:layout_constraintStart_toStartOf="@id/passwordEt"
+                app:layout_constraintTop_toTopOf="@id/passwordEt" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_lock_white_24dp"
+                app:layout_constraintBottom_toBottomOf="@id/passwordEt"
+                app:layout_constraintEnd_toEndOf="@id/password_bg"
+                app:layout_constraintStart_toStartOf="@id/passwordEt"
+                app:layout_constraintTop_toTopOf="@id/passwordEt" />
+
+            <TextView
+                android:id="@+id/forgetPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/forgetPassword"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:layout_constraintBottom_toTopOf="@id/loginMbtn"
+                app:layout_constraintEnd_toEndOf="@id/passwordEt"
+                app:layout_constraintTop_toBottomOf="@id/passwordEt" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginMbtn"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/stv_bold"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/enter"
+                android:textAllCaps="false"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="@id/phoneEt"
+                app:layout_constraintStart_toStartOf="@id/phoneEt"
+                app:layout_constraintTop_toBottomOf="@id/forgetPassword"
+                app:rippleColor="@color/colorAccent"
+                app:strokeColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/notHaveAccount"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:layout_constraintBottom_toTopOf="@id/registerMbtn"
+                app:layout_constraintEnd_toEndOf="@id/loginMbtn"
+                app:layout_constraintStart_toStartOf="@id/loginMbtn"
+                app:layout_constraintTop_toBottomOf="@id/loginMbtn" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/registerMbtn"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/colorDark"
+                android:fontFamily="@font/stv_bold"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/createAccount"
+                android:textAllCaps="false"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text2"
+                app:rippleColor="@color/colorAccent"
+                app:strokeColor="@android:color/darker_gray"
+                tools:layout_editor_absoluteX="18dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/bottomImg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/signinshape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
