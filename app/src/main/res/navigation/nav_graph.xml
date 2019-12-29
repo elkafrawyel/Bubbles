@@ -51,6 +51,9 @@
         <action
             android:id="@+id/action_homeFragment_to_makeOrderFragment"
             app:destination="@id/makeOrderFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_packageDetailsFragment"
+            app:destination="@id/packageDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -217,4 +220,8 @@
                 app:destination="@id/registerDriverFragment" />
         </fragment>
     </navigation>
+    <fragment
+        android:id="@+id/packageDetailsFragment"
+        android:name="com.elwaha.bubbles.ui.packageDetails.PackageDetailsFragment"
+        android:label="PackageDetailsFragment" />
 </navigation>

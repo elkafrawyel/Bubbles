@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources.getDrawable
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
@@ -26,8 +26,9 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.LatLngBounds
+import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.home_fragment.*
@@ -44,6 +45,7 @@ class HomeFragment : Fragment(), NavigationView.OnNavigationItemSelectedListener
     private lateinit var viewModel: HomeViewModel
     private lateinit var mMapView: MapView
     private lateinit var googleMap: GoogleMap
+    private lateinit var myLatLng: LatLng
     private lateinit var mFusedLocationProviderClient: FusedLocationProviderClient
 
     override fun onCreateView(
@@ -62,25 +64,35 @@ class HomeFragment : Fragment(), NavigationView.OnNavigationItemSelectedListener
             task.isSuccessful.let {
                 val location = task.result
                 location?.let {
-                    googleMap.addMarker(
-                        MarkerOptions().position(
-                            LatLng(location.latitude, location.longitude)
-                        ).title("موقعي")
-                    )
-                    moveCamera(location)
+                    myLatLng = LatLng(location.latitude, location.longitude)
+                    addMyLocationOnMap(myLatLng)
+                    addPackageOnMap("Mobile Iphone 11", LatLng((-34).toDouble(), 151.toDouble()))
                 }
             }
         }
     }
 
-    private fun moveCamera(location: Location) {
+    private fun addMyLocationOnMap(myLatLng: LatLng) {
+        googleMap.addMarker(
+            MarkerOptions().position(myLatLng)
+                .title(getString(R.string.myLoaction))
+        )
+            .setIcon(BitmapDescriptorFactory.fromResource(R.drawable.mylocation))
+        moveCamera(myLatLng)
+    }
+
+    private fun addPackageOnMap(title: String, latLng: LatLng) {
+        googleMap.addMarker(
+            MarkerOptions().position(latLng)
+                .title(title)
+        ).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.packageonmap))
+    }
+
+    private fun moveCamera(latLng: LatLng) {
         //move the camera
         googleMap.animateCamera(
             CameraUpdateFactory.newLatLngZoom(
-                LatLng(
-                    location.latitude,
-                    location.longitude
-                ), 12.0f
+                latLng, 12.0f
             )
         )
     }
@@ -113,6 +125,10 @@ class HomeFragment : Fragment(), NavigationView.OnNavigationItemSelectedListener
         logoutView.findViewById<LinearLayout>(R.id.logoutView).setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
             rootView.closeDrawer(GravityCompat.START)
+        }
+
+        pickToLocationMbtn.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_makeOrderFragment)
         }
 
         setUserType()
@@ -171,7 +187,7 @@ class HomeFragment : Fragment(), NavigationView.OnNavigationItemSelectedListener
                 findNavController().navigate(R.id.settingsFragment)
             }
 
-            R.id.nav_share ->{
+            R.id.nav_share -> {
                 activity?.shareApp()
             }
 
@@ -195,6 +211,34 @@ class HomeFragment : Fragment(), NavigationView.OnNavigationItemSelectedListener
             getLastKnownLocation()
             googleMap.isMyLocationEnabled = true
 
+
+            googleMap.setInfoWindowAdapter(object : GoogleMap.InfoWindowAdapter {
+                override fun getInfoContents(p0: Marker?): View? {
+                    return null
+                }
+
+                override fun getInfoWindow(marker: Marker?): View {
+                    val markerItemView = layoutInflater.inflate(R.layout.package_details_dialog, null)
+
+                    val locationTv = markerItemView!!.findViewById<TextView>(R.id.locationTv)
+                    locationTv.text ="القاهرة"
+
+                    val dateTv = markerItemView.findViewById<TextView>(R.id.dateTv)
+                    dateTv.text ="22-12-2020"
+
+                    val timeTv = markerItemView.findViewById<TextView>(R.id.timeTv)
+                    timeTv.text ="05:55 PM"
+
+
+                    return markerItemView
+                }
+            })
+
+            googleMap.setOnInfoWindowClickListener { marker: Marker ->
+                marker.hideInfoWindow()
+                val action = HomeFragmentDirections.actionHomeFragmentToPackageDetailsFragment()
+                findNavController().navigate(action)
+            }
         } else {
             // Do not have permissions, request them now
             EasyPermissions.requestPermissions(
@@ -243,4 +287,5 @@ class HomeFragment : Fragment(), NavigationView.OnNavigationItemSelectedListener
         super.onLowMemory()
         mMapView.onLowMemory()
     }
+
 }

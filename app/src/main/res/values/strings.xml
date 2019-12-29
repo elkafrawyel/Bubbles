@@ -84,5 +84,11 @@
     <string name="onway">OnWay</string>
     <string name="deliverd">Deliverd</string>
     <string name="cancelled">Cancelled</string>
+    <string name="package_details">Package Details</string>
+    <string name="more_details">More details</string>
+    <string name="myLoaction">My Location</string>
+    <string name="locationTo">Location to deliver the package to:</string>
+    <string name="type">Box Type</string>
+    <string name="boxImages">Box Images</string>
 
 </resources>

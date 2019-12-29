@@ -83,5 +83,10 @@
     <string name="onway">في الطريق</string>
     <string name="deliverd">تم الاستلام</string>
     <string name="cancelled">ملغي</string>
+    <string name="more_details">تفاصيل اكثر</string>
+    <string name="myLoaction">موقعي</string>
+    <string name="package_details">تفاصيل الطرد</string>
+    <string name="locationTo">العنوان المراد التوصيل اليه:</string>
+    <string name="type">نوع البوكس</string>
 
 </resources>

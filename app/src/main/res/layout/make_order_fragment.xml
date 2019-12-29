@@ -265,7 +265,7 @@
         android:layout_marginEnd="12dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/image_item_view" />
+        tools:listitem="@layout/make_order_image_item_view" />
 
 
     <LinearLayout
