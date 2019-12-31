@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.accountType.AccountTypeFragment">
 
+
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -14,70 +15,102 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/driverImg"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_margin="@dimen/dp_40"
-        android:src="@drawable/driver"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/driverTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/stv_bold"
-        android:gravity="center"
-        android:text="@string/driver"
-        android:layout_marginTop="8dp"
-        android:textAppearance="?attr/textAppearanceHeadline6"
-        android:textColor="@android:color/white"
-        android:layout_marginStart="18dp"
-        app:layout_constraintEnd_toEndOf="@id/driverImg"
-        app:layout_constraintStart_toStartOf="@id/driverImg"
-        app:layout_constraintTop_toBottomOf="@+id/driverImg" />
-
-    <ImageView
-        android:id="@+id/userImg"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="@dimen/dp_40"
-        android:src="@drawable/customer"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/driverImg" />
-
-    <TextView
-        android:id="@+id/userTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/stv_bold"
-        android:gravity="center"
-        android:text="@string/user"
-        android:layout_marginTop="8dp"
-        android:textAppearance="?attr/textAppearanceHeadline6"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@id/userImg"
-        app:layout_constraintStart_toStartOf="@id/userImg"
-        app:layout_constraintTop_toBottomOf="@id/userImg" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/choose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:background="@drawable/dark_transparent_bg"
         android:fontFamily="@font/stv_bold"
         android:text="@string/choose"
         android:textAppearance="?attr/textAppearanceHeadline6"
         android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/topLine"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/driverImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/driver"
+        app:layout_constraintBottom_toBottomOf="@id/topLine"
+        app:layout_constraintStart_toEndOf="@id/choose"
+        app:layout_constraintTop_toTopOf="@id/choose" />
+
+
+    <ImageView
+        android:id="@+id/rightLine"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_marginEnd="18dp"
+        android:src="@drawable/rightline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topLine" />
+
+
+    <TextView
+        android:id="@+id/driverTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/stv_bold"
+        android:gravity="center"
+        android:text="@string/driver"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/rightLine"
+        app:layout_constraintStart_toStartOf="@id/rightLine"
+        app:layout_constraintTop_toBottomOf="@id/rightLine" />
+
+
+    <ImageView
+        android:id="@+id/userImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/customer"
+        app:layout_constraintBottom_toBottomOf="@id/topLine"
+        app:layout_constraintEnd_toStartOf="@id/choose"
+        app:layout_constraintTop_toTopOf="@id/choose" />
+
+
+    <ImageView
+        android:id="@+id/leftLine"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_marginStart="18dp"
+        android:src="@drawable/leftline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/driverImg" />
+        app:layout_constraintTop_toTopOf="@id/topLine" />
+
+
+    <TextView
+        android:id="@+id/userTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/stv_bold"
+        android:gravity="center"
+        android:text="@string/user"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/leftLine"
+        app:layout_constraintStart_toStartOf="@id/leftLine"
+        app:layout_constraintTop_toBottomOf="@id/leftLine" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

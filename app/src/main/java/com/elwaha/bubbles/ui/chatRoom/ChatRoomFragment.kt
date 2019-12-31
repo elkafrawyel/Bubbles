@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.elkafrawyel.CustomViews
 
 import com.elwaha.bubbles.R
+import com.elwaha.bubbles.utilies.CustomLoadMoreView
 import kotlinx.android.synthetic.main.chat_room_fragment.*
 
 class ChatRoomFragment : Fragment() {
@@ -31,7 +32,7 @@ class ChatRoomFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(ChatRoomViewModel::class.java)
 
-        rootView.setLayout(text)
+        rootView.setLayout(messagesRv)
         rootView.setVisible(CustomViews.EMPTY)
         rootView.setEmptyText("لا توجد رسائل")
 

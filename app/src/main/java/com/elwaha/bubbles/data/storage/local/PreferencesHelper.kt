@@ -9,6 +9,7 @@ class PreferencesHelper {
         private const val PREF_NAME = "bubbles"
         private const val IS_LOGGED_IN = "isLoggedIn"
         private const val USER = "userModel"
+        private const val USER_ID = "userId"
         private const val LANGUAGE = "language"
         private const val USER_TYPE = "userType"
     }
@@ -21,10 +22,11 @@ class PreferencesHelper {
     var userType = preference.getInt(USER_TYPE, -1)
         set(value) = preference.edit().putInt(USER_TYPE, value).apply()
 
+    var userId = preference.getString(USER_ID, null)
+        set(value) = preference.edit().putString(USER_ID, value).apply()
 
     var user = preference.getString(USER, null)
         set(value) = preference.edit().putString(USER, value).apply()
-
 
     var language = preference.getString(LANGUAGE, null)
         //    var language = preference.getString(LANGUAGE, Constants.Language.ARABIC.value)
